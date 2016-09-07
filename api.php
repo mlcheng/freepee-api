@@ -23,6 +23,7 @@ switch(FreePeeAPI::getEndpoint()) {
 		break;
 	case Constants::ENDPOINT_LOGIN:
 		FreePeeAPI::handleLoginEndpoint($method);
+		break;
 	default:
 		break;
 }
