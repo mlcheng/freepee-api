@@ -1,6 +1,6 @@
 # Free Pee API v2
 
-This document details how to use the Free Pee API (henceforth known as *API*) for your application. The API provides locations of free bathrooms, among other things.
+This document details how to use the Free Pee API (henceforth known as **API**) for your application. The API provides locations of free bathrooms, among other things.
 
 The base URL of the API is
 
@@ -45,7 +45,7 @@ A sample request would be
 
 The response would be an array of bathroom objects.
 
-### `GET bathroom/query/id/{id}?vote&gid={gid}
+### `GET bathroom/query/id/{id}?vote&gid={gid}`
 The `query` endpoint will allow retrieval of certain aspects of a bathroom. Specify the bathroom ID as well as `vote`. Then pass the user's Google ID. The API will return a JSON object specifying the user's voting status for the given bathroom. The request would look something like
 
 `GET bathroom/query/id/48?vote&gid=GOOGLE_ID`
