@@ -1,10 +1,12 @@
 # Free Pee API v2
 
-This document details how to use the Free Pee API (henceforth known as API) for your application. The API provides locations of free bathrooms.
+This document details how to use the Free Pee API (henceforth known as *API*) for your application. The API provides locations of free bathrooms, among other things.
 
 The base URL of the API is
 
 `https://www.iqwerty.net/freepee/api/v2/`
+
+Please note that the API is currently in the *development* phase. Endpoints that you see here have finished development but are not in production yet.
 
 ## `bathroom/`
 The `bathroom` endpoint is for manipulation of bathrooms in Free Pee.
