@@ -52,9 +52,9 @@ The response would be a JSON object
 
 ```json
 {
-	id: 48,
-	userid: GOOGLE_ID,
-	vote: 1
+	"id": 48,
+	"userid": GOOGLE_ID,
+	"vote": 1
 }
 ```
 
