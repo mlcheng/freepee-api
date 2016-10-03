@@ -21,6 +21,9 @@ switch(FreePeeAPI::getEndpoint()) {
 	case Constants::ENDPOINT_BATHROOM:
 		FreePeeAPI::handleBathroomEndpoint($method);
 		break;
+	case Constants::ENDPOINT_GEOCODE:
+		FreePeeAPI::handleGeocodeEndpoint($method);
+		break;
 	case Constants::ENDPOINT_LOGIN:
 		FreePeeAPI::handleLoginEndpoint($method);
 		break;
