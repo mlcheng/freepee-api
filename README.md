@@ -8,6 +8,8 @@ The base URL of the API is
 
 Please note that the API is currently in the *development* phase. Endpoints that you see here have finished development but are not in production yet.
 
+---
+
 ## `bathroom/`
 The `bathroom` endpoint is for manipulation of bathrooms in Free Pee.
 
@@ -75,12 +77,17 @@ gid=GOOGLE_ID&ukey=USER_KEY
 ```
 
 ### `POST bathroom/create`
+This endpoint has not been created yet. Lol.
+
+---
 
 ## `geocode`
 The `geocode` endpoint is a wrapper around the [Google Geocoding API](https://developers.google.com/maps/documentation/geocoding/start). Read their docs for more information.
 
 ### `GET geocode/get/coords/{lat},{lng}`
 This endpoint will return Google's JSON response for the specified coordinates.
+
+---
 
 ## `login/`
 The `login` endpoint will allow users to be authenticated or login to Free Pee. Logging in will allow users to add, edit, and vote on bathrooms. Authenticated users can also remove bathrooms that they created.
@@ -138,5 +145,7 @@ If the user is logged in, the response will return
 	"authenticated": true
 }
 ```
+
+---
 
 Cross-Origin Resource Sharing
