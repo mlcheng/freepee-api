@@ -82,11 +82,11 @@ Test('Retrieve address location given coordinates')
 	.expect(FreePeeAPI.get('geocode/get/coords/59.39678929534,24.669965095818'))
 	.toBe('Akadeemia tee 3, 12611 Tallinn, Estonia');
 
-Test('Attempted badly structured hit on login endpoint returns empty')
+Test('Badly structured hit on login endpoint returns empty')
 	.expect(FreePeeAPI.post('login'))
 	.toBe(null);
 
-Test('Attempted invalid login returns an error object')
+Test('Invalid login returns an error object')
 	.using(Test.ValidationFunction.OBJECT_DEEP)
 	.expect(FreePeeAPI.post('login', {
 		gid: 1,
