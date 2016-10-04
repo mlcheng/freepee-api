@@ -81,7 +81,7 @@ This endpoint has not been created yet. Lol.
 
 ---
 
-## `geocode`
+## `geocode/`
 The `geocode` endpoint is a wrapper around the [Google Geocoding API](https://developers.google.com/maps/documentation/geocoding/start). Read their docs for more information.
 
 ### `GET geocode/get/coords/{lat},{lng}`
