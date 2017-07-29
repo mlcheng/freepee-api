@@ -63,7 +63,7 @@ Test('Get a list of bathrooms by coordinates and zoom level')
 		}
 	]);
 
-Test('Get a user\'s voting status of a bathroom')
+Test('Get the voting status of a bathroom for a user')
 	.using(Test.ValidationFunction.OBJECT_DEEP)
 	.expect(FreePeeAPI.get('bathroom/query/id/2?vote&gid=1'))
 	.toBe({
