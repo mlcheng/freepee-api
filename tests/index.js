@@ -18,7 +18,7 @@ const HIDDEN = '---API-TEST---';
 const FreePeeAPI = require('./api')(HIDDEN);
 
 
-Test('Get a bathroom by ID', ({ async, expect }) => {
+Test('Get a bathroom by ID', ({ async, expect }) =>
 	async(done => {
 		FreePeeAPI.get('bathroom/get/id/2').then(result => {
 			expect(result).toEqual([
@@ -39,10 +39,10 @@ Test('Get a bathroom by ID', ({ async, expect }) => {
 
 			done();
 		});
-	});
-});
+	})
+);
 
-Test('Get a list of bathrooms by coordinates and zoom level', ({ async, expect }) => {
+Test('Get a list of bathrooms by coordinates and zoom level', ({ async, expect }) =>
 	async(done => {
 		FreePeeAPI.get('bathroom/get/coords/59.39678929534,24.669965095818,21z').then(result => {
 			expect(result).toEqual([
@@ -70,10 +70,10 @@ Test('Get a list of bathrooms by coordinates and zoom level', ({ async, expect }
 
 			done();
 		});
-	});
-});
+	})
+);
 
-Test('Get the voting status of a bathroom for a user', ({ async, expect }) => {
+Test('Get the voting status of a bathroom for a user', ({ async, expect }) =>
 	async(done => {
 		FreePeeAPI.get('bathroom/query/id/2?vote&gid=1').then(result => {
 			expect(result).toEqual({
@@ -84,30 +84,30 @@ Test('Get the voting status of a bathroom for a user', ({ async, expect }) => {
 
 			done();
 		});
-	});
-});
+	})
+);
 
-Test('Retrieve address location given coordinates', ({ async, expect }) => {
+Test('Retrieve address location given coordinates', ({ async, expect }) =>
 	async(done => {
 		FreePeeAPI.get('geocode/get/coords/59.39678929534,24.669965095818').then(result => {
 			expect(result.results.shift().formatted_address).toBe('Akadeemia tee 3, 12611 Tallinn, Estonia');
 
 			done();
 		});
-	});
-});
+	})
+);
 
-Test('Badly structured hit on login endpoint returns empty', ({ async, expect }) => {
+Test('Badly structured hit on login endpoint returns empty', ({ async, expect }) =>
 	async(done => {
 		FreePeeAPI.post('login').then(result => {
 			expect(result).toBe(null);
 
 			done();
 		});
-	});
-});
+	})
+);
 
-Test('Invalid login returns an error object', ({ async, expect }) => {
+Test('Invalid login returns an error object', ({ async, expect }) =>
 	async(done => {
 		FreePeeAPI.post('login', {
 			gid: 1,
@@ -122,5 +122,5 @@ Test('Invalid login returns an error object', ({ async, expect }) => {
 
 			done();
 		});
-	});
-});
+	})
+);
