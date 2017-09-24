@@ -111,8 +111,30 @@ coords=LAT,LNG
 
 A successful creation will return the `Good request` response. Otherwise, the server will respond with a `400 Bad Request`.
 
-### `POST bathroom/edit`
-This authenticated endpoint takes a bathroom ID and an updated bathroom description.
+### `POST bathroom/edit/id/{id}`
+This authenticated endpoint takes a bathroom ID and an updated bathroom description. A sample request is
+
+```
+POST bathroom/edit/id/8748
+content-type: application/x-www-form-urlencoded
+
+desc=DESCRIPTION
+&gid=GOOGLE_ID
+&ukey=USER_KEY
+```
+
+Successful edit will return the `Good request` response.
+
+### `POST bathroom/delete/id/{id}`
+This authenticated endpoint takes a bathroom ID to delete. A sample request is
+
+```
+POST bathroom/delete/id/8748
+content-type: application/x-www-form-urlencoded
+
+gid=GOOGLE_ID
+&ukey=USER_KEY
+```
 
 ---
 
